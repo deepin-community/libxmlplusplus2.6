@@ -1,0 +1,9 @@
+Document: libxml++2.6-reference
+Title: Reference of libxml++
+Author: Christophe de Vienne <cdevienne@gmail.com>
+Abstract: Reference Manual for Libxml++
+Section: Programming/C++
+
+Format: HTML
+Index: /usr/share/doc/libxml++2.6-doc/reference/html/index.html
+Files: /usr/share/doc/libxml++2.6-doc/reference/html/*.html

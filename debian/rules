@@ -1,0 +1,31 @@
+#!/usr/bin/make -f
+
+SHARED_PKG := $(shell sed -rn 's/^Package:[[:space:]]*(libxml\+\+[0-9\.]+-[0-9][0-9a-z]*)[[:space:]]*$$/\1/p' debian/control)
+SHVER := 2.40.0
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+
+# Use UTF-8 locale as the test-suite currently fails otherwise
+# https://bugzilla.gnome.org/show_bug.cgi?id=702136
+export LC_ALL = C.UTF-8
+
+%:
+	dh $@ --with gnome
+
+override_dh_install:
+	find debian/tmp -name '*.la' -print -delete
+	dh_install
+
+override_dh_compress:
+	dh_compress -Xexamples
+
+override_dh_installexamples:
+	$(MAKE) -C examples clean
+	dh_installexamples -X.deps -X.dirstamp -X.libs -XMakefile -Xmake_check
+
+override_dh_missing:
+	dh_missing --fail-missing
+
+override_dh_makeshlibs:
+	dh_makeshlibs -V"$(SHARED_PKG) (>= $(SHVER))" -- -c4

@@ -1,0 +1,3 @@
+version=4
+https://download.gnome.org/sources/libxml++/(2[\d\.]+[02468])/ \
+	libxml\+\+@ANY_VERSION@\.tar\.xz

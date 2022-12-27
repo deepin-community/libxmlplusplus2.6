@@ -1,0 +1,4 @@
+usr/include
+usr/lib/*/libxml++-2.6
+usr/lib/*/lib*.so
+usr/lib/*/pkgconfig

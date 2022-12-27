@@ -1,0 +1,361 @@
+libxml++2.6 (2.40.1-3) unstable; urgency=medium
+
+  * Update Vcs fields for migration to https://salsa.debian.org/
+  * Bump Standards-Version to 4.3.0
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 28 Dec 2018 10:26:53 -0500
+
+libxml++2.6 (2.40.1-2) unstable; urgency=medium
+
+  * Update Vcs fields for conversion to git
+  * Add debian/gbp.conf
+  * Bump Standards-Version to 4.1.2
+  * Only watch for 2.x version since 3.x breaks API
+  * Switch from cdbs to dh
+  * Bump debhelper compat to 11
+  * Drop obsolete debian/libxml++2.6-doc.doc-base.libxml++2.6-manual
+  * Switch to automatic dbgsym packages
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 17 Dec 2017 10:38:44 -0500
+
+libxml++2.6 (2.40.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 28 Oct 2015 16:19:49 +0100
+
+libxml++2.6 (2.40.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Build-Depends on mm-common to (>= 0.9.8) as per configure.ac.
+  * Bump SHVER to 2.40.0.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 08 Oct 2015 16:54:23 +0200
+
+libxml++2.6 (2.38.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Rename libxml++2.6-2 to libxml++2.6-2v5 for g++-5 ABI transition
+    - build-depend on a glibmm2.4 version that was built with g++-5
+    - Breaks/Replaces libxml++2.6-2
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 18 Aug 2015 10:22:52 +0100
+
+libxml++2.6 (2.38.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump dependency on libxml2-dev to (>= 2.7.7) as per configure.ac.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 15 Jun 2015 00:36:50 +0200
+
+libxml++2.6 (2.38.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Use default automake version.
+  * Bump shlibs version to 2.38.0.
+  * Bump Build-Depends on mm-common to (>= 0.9.7) as per configure.ac.
+  * Convert to multiarch.
+  * Set pkg-gnome-maintainers@lists.alioth.debian.org as Maintainer.
+  * Bump Standards-Version to 3.9.6.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 19 May 2015 00:48:25 +0200
+
+libxml++2.6 (2.36.0-2.1) unstable; urgency=low
+
+  [ Fernando Seiti Furusato]
+  * Non-maintainer upload.
+  * Adding autoreconf to the build. Forcing to use automake-1.11 due to
+    compatibility issues. Closes: #755744
+
+ -- Andreas Barth <aba@ayous.org>  Fri, 29 Aug 2014 03:02:24 +0000
+
+libxml++2.6 (2.36.0-2) unstable; urgency=low
+
+  * Don't rely on LC_ALL being already set and explicitly export it.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 13 Jun 2013 14:33:19 +0200
+
+libxml++2.6 (2.36.0-1) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * From Ubuntu:
+    + debian/rules: run make check as a sanity check. Closes: #692160.
+
+  [ Michael Biebl ]
+  * New upstream release.
+  * Drop obsolete DM-Upload-Allowed field.
+  * Bump required versions of libxml2-dev to (>= 2.7.3) and libglibmm-2.4-dev
+    to (>= 2.32.0).
+  * Update debian/copyright according to the copyright-format 1.0 spec.
+  * Bump Standards-Version to 3.9.4. No further changes.
+  * Bump shlibs version to 2.36.0.
+  * Add Build-Depends on autotools-dev as lintian was complaining about
+    outdated config.{guess,sub}.
+  * Use UTF-8 locale as the test-suite currently fails otherwise.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 13 Jun 2013 00:51:17 +0200
+
+libxml++2.6 (2.34.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/watch: Track .xz tarballs.
+  * Bump debhelper compatibility level to 8.
+  * Stop installing libtool .la files.
+  * Bump shlibs version to 2.34.2 due to new API additions.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 06 Feb 2012 05:01:20 +0100
+
+libxml++2.6 (2.34.1-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+    + Loosen mm-common requirement to >= 0.9.3 as per configure.ac.
+  * Update Standards-Version to 3.9.2. No change needed.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Sun, 24 Apr 2011 20:32:34 +0800
+
+libxml++2.6 (2.34.0-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+    + Add mm-common (>= 0.9.5) as build-dep.
+  * Convert to source format 3.0 (quilt):
+    + debian/rules:
+      + Drop simple-patchsys.mk.
+      + Drop check-dist.mk.
+  * debian/watch:
+    + Fix RegEx.
+    + Track *.tar.bz2 instead of *.tar.gz
+  * debian/control.in:
+    + Fix lintian warning: description-synopsis-starts-with-article.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Sun, 17 Apr 2011 21:19:30 +0800
+
+libxml++2.6 (2.33.1-1) experimental; urgency=low
+
+  [ Sebastian Dröge ]
+  * New upstream bugfix release.
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/control.in,
+    debian/rules:
+    + Remove the chrpath hack, it's been fixed in libtool.
+
+  [ Deng Xiyue ]
+  * New upstream development release.  (Closes: #605773)
+    + Bump SHVER to 2.33.1 due to new symbol.
+    + Don't clean the examples during install, it's now in different
+      structures.
+  * Change doc-base paths for new structure.
+  * Drop manual doc-base, not exist anymore.
+  * Update Standard-Version to 3.9.1.
+  * Include check-dist.mk to prevent uploading to wrong place.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Thu, 06 Jan 2011 05:51:51 +0800
+
+libxml++2.6 (2.30.0-1) unstable; urgency=low
+
+  * New upstream stable release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Fri, 09 Apr 2010 13:46:26 +0200
+
+libxml++2.6 (2.26.1-1) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * Include clean-la.mk rule.
+
+  [ Deng Xiyue ]
+  * New upstream release.
+  * Update Standard-Version to 3.8.3.  No changes needed.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Sun, 25 Oct 2009 14:56:53 -0700
+
+libxml++2.6 (2.26.0-2) unstable; urgency=low
+
+  * Mark libxml++2.6-2 Breaks: gnote (<< 0.4) due to ABI change.  See
+    upstream bug report for detail:
+    http://bugzilla.gnome.org/show_bug.cgi?id=583825
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Fri, 29 May 2009 00:57:16 +0800
+
+libxml++2.6 (2.26.0-1) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * Stop mentioning GNOME 2.
+
+  [ Deng Xiyue ]
+  * New upstream release.
+  * Update Standard-Version to 3.8.1.  No change needed.
+  * Change -dbg package section to debug as per new policy.
+  * Let libxml++2.6-2 Replaces libxml++2.6c2a so that it is
+    Ubuntu-sync friendly.  Thanks Sebastien Bacher for the suggestion.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Wed, 29 Apr 2009 22:46:16 +0800
+
+libxml++2.6 (2.24.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upload to unstable.  Drop check-dist.mk.
+  * `make -C examples clean` after `make install` to prevent shipping
+    unexpected files.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Fri, 06 Mar 2009 09:30:52 +0800
+
+libxml++2.6 (2.24.2-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Thu, 01 Jan 2009 15:24:23 +0800
+
+libxml++2.6 (2.24.1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Use POSIX standard regex classes in sed trick in debian/rules.
+  * Use viewsvn in Vcs-Browser URL.
+  * Downgrading pkg-config from Depends to Suggests.
+  * Remove unnecessary fields at the end of debian/changelog.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Mon, 15 Dec 2008 21:00:13 +0800
+
+libxml++2.6 (2.24.0-1) experimental; urgency=low
+
+  [ Deng Xiyue ]
+  * Drop `head -n 1' from sed trick.
+  * Add `DM-Upload-Allowed: yes' field.  Thanks Loïc for advocacy.
+  * Fix typo in last changelog.
+  * Add dpkg-dev >= 1.14.16 to Build-Depends for DM usage.
+  * Remove doc-base from Build-Depends as it's not b-deped at all.
+  * Add ${shlibs:Depends} to all Depends fields as recommended.
+  * Use machine-interpretable format for debian/copyright.
+  * New upstream release.
+    + Bump shlibs version to 2.24.0 due to new API addition.  ABI remains
+      compatible.
+  * Update Standard-Version to 3.8.0.  No change needed.
+  * Targeting experimental as Lenny is in freeze.  Add check-dist.mk to
+    debian/rules.
+  * Check for number-dot-based version in debian/watch.
+  * Fix path in doc-base documents.  No versioned directory anymore.
+
+  [ Loic Minier ]
+  * Properly anchor package name regexp.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Fri, 26 Sep 2008 21:10:48 +0800
+
+libxml++2.6 (2.22.0-1) unstable; urgency=low
+
+  * New upstream release.
+    + Fix memory leak in class xmlpp::Document::Init.  (Closes: #469809)
+    + Drop 10_gcc4.3_include_fix.patch and 20_file_id_fix.patch,
+      merged upstream.
+    + Adjust path in doc-base reference for new version.
+  * Fix section in doc-base reference.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Sat, 08 Mar 2008 01:11:26 +0800
+
+libxml++2.6 (2.20.0-2) unstable; urgency=low
+
+  * Refined debian/rules to set variables SHARED_PKG and DOC_PKG by sed
+    from debian/control and use variable SHVER for shlibs version, and
+    refine and reformat corresponding rules accordingly.
+  * Drop 70_relibtoolize.patch, and use chrpath hack to get rid of amd64
+    rpath issue, hence add chrpath to b-deps.  Should contact upstream for
+    real fix.
+  * Migrate maintainer ship to Debian GNOME Team, and add Debian GNOME
+    Team to uploaders.
+  * Add Vcs-Svn and Vcs-Browser fields to source stanza in control file.
+  * Update build-dep/dep in debian/control* as per source configure.in,
+    and drop debian version postfix as per lintian.
+  * Add -dbg package for debug symbols.
+  * Update debian/compat to 6, and bump build-dep debhelper to >= 6, and
+    cdbs to >= 0.4.51 to avoid empty debug package bug.
+  * Update watch version to 3, and drop 'debian uupdate' as not
+    necessarily required.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Thu, 28 Feb 2008 18:27:38 +0800
+
+libxml++2.6 (2.20.0-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #430142)
+    + No more segfault with invalid xpath in Node::find. (Closes: #374067)
+  * Add myself as maintainer.
+  * Ack NMU. (Closes: #315967, #349630)
+  * debian/control
+    + Update standard version to 3.7.3.
+    + Depends on debhelper >= 5.
+    + Add b-deps on cdbs, and gnome-pkg-tools for clean-la.mk, and of
+      course doc-base.
+    + Use ${binary:Version} instead of deprecated ${Source-Version} for
+      binNMU safety.
+    + Use Homepage: in source stanza instead of pseudo one in Description.
+    + Update package descriptions.
+    + The C++ ABI transition has ended long ago, everything is installable
+      now. (Closes: #318977)
+  * debian/copyright
+    + Correct pointer to /usr/share/common-licenses/LGPL-2.1
+    + Update upstream maintainers' email addresses.
+    + Update source URL.
+    + Add copyright text, with holders listed in source files.
+  * debian/rules
+    + Migrate build system to cdbs, which sets build target properly.
+      (Closes: #395784)
+    + Set LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+    + Use versioned shlibs for libxml++2.6-2.
+    + Set DEB_DH_INSTALL_SOURCEDIR := debian/tmp to make *.install
+      shorter.
+    + Include clean-la.mk from gnome-pkg-tools to remove dependency_libs
+      information from .la files.
+  * debian/libxml++2.6-dev.docs
+    - Removed, not needed.
+  * debian/*.install
+    + Refined, use shorter path, and lib*.{a,so}, *.la
+  * debian/libxml++2.6-doc.doc-base
+    - Removed, in favor of more specific ones.
+  * debian/libxml++2.6-doc.doc-base.libxml++-{manual,reference}
+    + Added, and adjusted for proper path.
+  * debian/patches
+    + Add 10_gcc4.3_include_fix.patch to fix FTBFS on gcc 4.3.
+      (Closes: #417367)
+    + Add 20_file_id_fix.patch to fix file descriptions. (Closes: #272308)
+    + Add 70_relibtoolize.patch as amd64 rpath issue workaround.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Thu, 31 Jan 2008 10:07:18 +0800
+
+libxml++2.6 (2.14.0-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * Medium-urgency upload for RC bugfix.
+  * New upstream release with new soname (Closes: #330512, #349630, #315967)
+  * No longer build reference documentation, since it's included in tarball.
+  * Fix makefile so that docs/manual/html isn't deleted on clean.
+
+ -- Bradley Bell <btb@debian.org>  Sat, 10 Jun 2006 00:32:25 -0700
+
+libxml++2.6 (2.6.1-2.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Medium-urgency upload for RC bugfix.
+  * Change package name from libxml++2.6-1c2 to libxml++2.6-1c2a for the C++
+    mt allocator ABI change, and conflict/replace libxml++2.6-1c2
+    accordingly.  Closes: #339226.
+  * Build-depend on libglibmm-2.4-dev (>= 2.8.2-1), to make sure we get
+    the matching ABI.
+
+ -- Steve Langasek <vorlon@debian.org>  Wed, 30 Nov 2005 05:54:52 -0800
+
+libxml++2.6 (2.6.1-2.1) unstable; urgency=low
+
+  * Non-maintainer upload
+  * C++ ABI transition
+  * Added library SONAME to the runtime library package's name
+
+ -- Philipp Kern <pkern@debian.org>  Sun, 17 Jul 2005 12:09:53 +0000
+
+libxml++2.6 (2.6.1-2) unstable; urgency=low
+
+  * Moved doc-base to libxml++2.6 (closes: Bug#258985)
+
+ -- Chris Leishman <masklin@debian.org>  Tue, 10 Aug 2004 17:27:06 +1000
+
+libxml++2.6 (2.6.1-1) unstable; urgency=low
+
+  * Initial 2.6 Release.
+
+ -- Chris Leishman <masklin@debian.org>  Sun, 10 Sep 2000 17:38:04 +1100

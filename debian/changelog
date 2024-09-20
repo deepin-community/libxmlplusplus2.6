@@ -1,3 +1,9 @@
+libxml++2.6 (2.40.1-3deepin0) unstable; urgency=medium
+
+  * No source change upload against GCC 12.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Fri, 20 Sep 2024 12:12:22 +0800
+
 libxml++2.6 (2.40.1-3) unstable; urgency=medium
 
   * Update Vcs fields for migration to https://salsa.debian.org/
